@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Reed</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="static/favicon.ico">
+     
+      <link rel="stylesheet" href="static/style.css">
+      <link rel="stylesheet" href="static/mobile.css">
+      <link rel="stylesheet" href="static/fontawesome/css/font-awesome.css">
+      <style>
+          .masonry{
+              margin-top: 30px;
+          }
+          .topnav input:nth-child(3){
+              float: right;
+          }
+      </style>
+</head>
+
+<body bgcolor="#d3d3d3">  
+  
+  <div class="topnav" id="myTopnav">
+      <form action="/page" method="post">
+                <input type="text" value="4" name="page" readonly style="width: 0; padding: 0px; height: 0px;">
+                <input type="submit" value="Feed" style="width: 96px;">
+      </form>
+      <form action="/page" method="post">
+                <input type="text" value="5" name="page" readonly style="width: 0; padding: 0px; height: 0px;">
+                <input type="submit" value="Summary">
+      </form>
+      <form action="/logout" method="post">
+                <input type="submit" value="Log Out" id="logout">
+      </form>
+      <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+    
+         <form action="" name="searchform">
+            <input type="url" class="search-form" name="url" id="url" placeholder="Paste link">
+            <input type="submit" class="search-submit" id="get_url" value="Summarize">
+         </form>  
+  
+<div class="masonry" id="main_div">
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script  src="static/index.js"></script>
+  <script  src="static/user_summary.js"></script>
+  <script src="static/menu.js"></script>
+  <script src="static/validation.js"></script>
+
+</body>
+</html>

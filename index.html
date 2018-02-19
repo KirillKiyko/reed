@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Reed</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="static/favicon.ico">
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="static/mobile.css">
+</head>
+
+
+    <div class="slider-wrapper">
+
+    <img src="static/mobile.png" class="slider-bg">
+		<div id="slider">
+  			<a href="#" class="control_next">&gt;</a>
+  			<a href="#" class="control_prev">&lt;</a>
+  	<ul>
+   	    <li class="slide-2-logo"><p><img src="static/reed.png" alt="">Reed</p></li>
+    	<li class="slide-2"><p>Introducing <strong>Reed</strong>, the new way of reading experience - <b>more</b> in <b>less</b> time.</p></li>
+    	<li class="slide-2"><p>Now summarize any articles, news &amp; stores into a <b>quick</b> &amp; <b>crisp</b> summary.</p></li>
+
+  	</ul>  
+		</div>
+	</div>
+   
+    <div class="play_wrapper">
+    <p style="width: 70%; margin-left: 15%;"><strong>AI meets Content</strong><br></p>
+		<p style="width: 70%; margin-left: 15%; text-align: justify;">An Artificial Intelligence powered news, 			articles &amp; stories summarizing app to keep you updated with <b>quick</b> &amp; <b>crisp</b> summary 
+    	</p>			
+
+    <p style="width: 70%; margin-left: 15%; text-align: justify;">As we promised we are "<b>quick</b> &amp; <b>crisp</b>" and whis is about us.</p>
+    <p style="width: 70%; margin-left: 15%; text-align: justify;">
+    	The new reading experience awaits you!
+    </p>
+    <p>
+    	Download now
+    </p>
+    	<a href="https://play.google.com/store/apps/details?id=com.reed"><img src="static/play.png" alt=""></a>
+    </div>
+    
+    <div class="login_wrapper">	 
+       <div id="logo-container">  
+    			<p><img src="static/reed.png" alt="">Reed</p> 
+       </div>
+       <div class="form">    
+       <div class="tab-content"> 
+                <ul class="tab-group">         
+                    <li class="tab active"><a href="#login">LOG IN</a></li>
+                    <li class="tab"><a href="#signup">SIGN UP</a></li>
+                </ul>
+        <div id="login">   
+           
+          <form name="loginform">
+           
+            <div class="field-wrap"> 
+            <h4>Email Address</h4>
+            <input type="email" required autocomplete="on" id="email" name="email" onblur="ValidateEmail(document.loginform.email)">
+            </div> 
+               
+          <div class="field-wrap">
+            <label>
+              <h4>Password</h4>
+            </label>
+            <input type="password" required autocomplete="off" id="password" name="password" onblur="ValidatePassword()">
+          </div>
+          
+          <input type="button" id="log_in" class="button button-block" value="Log in">
+          
+          </form>
+
+
+          <div class="forgot-pass">
+                <a onClick="document.getElementById('win').removeAttribute('style');">Forgot password?</a>
+          </div>
+
+        </div>
+        
+        <div id="signup">    
+          
+          <form name="signupform">
+         
+          <div class="top-row">
+            <div class="field-wrap">
+              
+                <h4>First Name</h4>
+              
+              <input type="text" required autocomplete="off" id="name" name="name" onblur="ValidateName()"/>
+            </div>    
+         
+            <div class="field-wrap">
+              <h4>Last Name</h4>
+              <input type="text" required autocomplete="off" name="surname" id="surname"onblur="ValidateSurname()"/>
+            </div>
+          </div>
+             
+          <div class="field-wrap">
+            <h4>Email Adress</h4>
+            <input type="email"required autocomplete="off" name="email" id="email2" onblur="ValidateEmail2(document.signupform.email2)"/>
+          </div>
+          
+          <div class="field-wrap">
+            <h4>Set A Password</h4>
+            <input type="password"required autocomplete="off" id="password2" name="password" onblur="ValidatePassword2()"/>
+          </div>
+          
+              <input type="button" id="sign_up" class="button button-block" value="Get Started"/>
+           
+          </form>
+
+        </div>
+      </div><!-- tab-content -->
+      <div class="socials">
+      	<div class="socials-fb">
+            <form method="get" action="http://localhost:8000/facebook_login">
+                <button>Facebook</button>
+            </form>
+      	</div>
+      	<div class="socials-g">
+            <form method="get" action="http://localhost:8000/google_login">
+                <button>Google+</button>
+            </form>
+		    </div>
+     	  <div class="socials-tw">
+            <form method="get" action="http://localhost:8000/twitter_login">
+                <button>Twitter</button>
+            </form>
+          </div>
+          <a href="https://www.reedit.io/privacy_policy" target="_blank" class="privacy-style">Privacy Policy</a>
+      </div>
+
+</div>
+	</div> <!-- /form -->
+
+   <div id="win" style="display:none;">
+        <div class="overlay" onClick="getElementById('win').style.display='none';close_forgot();"></div>
+          <div class="visible-modal-pricing" id="forgot_div">
+            <h4 id="message">Enter Your e-mail for autorization</h4>
+            <input type="email" class="forgot" placeholder="Enter E-mail" id="forgot_email">
+            <input type="button" class="forgot-submit" value="Send me a code" onclick="forgot_password()" id="forgot_button">
+        </div>
+   </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="static/index.js"></script>
+    <script src="static/validation.js"></script>
+    <script src="static/login.js"></script>
+    <script src="static/social_auth.js"></script>
+    <script>
+		jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});    
+</script>
+</body>
+</html>
