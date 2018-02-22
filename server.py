@@ -990,7 +990,7 @@ application = tornado.web.Application([
     (r"/google5d453b36b6a0dd4e.html", GoogleVerify),
     (r"/", RedirectLogin),
     (r"", RedirectLogin2),
-], cookie_secret="61oETzKTQAGaZdkL5gEmGeJHFuYh7EQnp5XdTP1o/Vo=", **settings)
+], cookie_secret="", **settings)
 
 
 if __name__ == "__main__":
