@@ -968,13 +968,7 @@ class GoogleVerify(tornado.web.RequestHandler):
 settings = {'static_path': os.path.join(os.path.dirname(__file__), "static"),
             'debug': True,
             'serve_traceback': True,
-            "login_url": "/login",
-            'google_oauth': {'key': '126498024083-1gu5fms5g3qpug648nb505hhq6e0cq6f.apps.googleusercontent.com',
-                             'secret': 'cvQt7svNnhe2mmkPlBFDk8cA'},
-            'twitter_consumer_key': 'hCPNxr1fS5pXbnwRBmiWGY7SZ',
-            'twitter_consumer_secret': 'JpzKqj37BhyoK2ZsoIp7ci0HERZ5SlucycFjEQ9EAZWC4QeDFk',
-            'facebook_api_key': '210168832870025',
-            'facebook_secret': '07547d2ccaefb8d18eb7cd8998962b97'
+            "login_url": "/login"
 }
 
 application = tornado.web.Application([
